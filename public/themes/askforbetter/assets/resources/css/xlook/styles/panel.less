@@ -1,0 +1,67 @@
+@panel-side-padding-xxs: 20px;
+@panel-side-padding-lg: @xui-grid-gutter-width;
+.xui-panel-preamble {
+  margin: 35px 0;
+  font-size: 16px;
+  font-family: "museo-sans-bold";
+  @media @xui-mq-screen-min-width-sm {
+    padding-left: 20px;
+  }
+}
+.xui-panel {
+  padding: @xui-grid-gutter-width @panel-side-padding-xxs; //Should be grid-gutter-width/2 client wants 20px
+  @media @xui-mq-screen-min-width-lg {
+    padding-left: @panel-side-padding-lg;
+    padding-right: @panel-side-padding-lg;
+  }
+  border: 1px solid @xui-smoke;
+  margin: @xui-grid-gutter-width/2 0 0;
+  border-radius: @xui-border-radius;
+  background: @xui-white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0 ,0 ,0.1);
+  slider-stages {
+    margin-top: (@xui-grid-gutter-width/2) - @xui-label-margin-bottom;
+  }
+  label {
+    font-size: 14px;
+  }
+}
+.xui-panel-clear {
+  padding: @xui-grid-gutter-width @panel-side-padding-xxs; //Should be grid-gutter-width/2 client wants 20px
+  @media @xui-mq-screen-min-width-lg {
+    padding-left: @panel-side-padding-lg;
+    padding-right: @panel-side-padding-lg;
+  }
+  margin: @xui-grid-gutter-width/2 0 0;
+  slider-stages {
+    margin-top: (@xui-grid-gutter-width/2) - @xui-label-margin-bottom;
+  }
+  label {
+    font-size: 14px;
+  }
+}
+
+.xui-aside-column {
+  display: none;
+  > * {
+    @media @xui-mq-screen-min-width-sm {
+      margin-left: @panel-side-padding-lg;
+    }
+  }
+}
+@media @xui-mq-screen-min-width-sm {
+  .xui-priority-column {
+    width: 66.67%;
+    float: left;
+  }
+  .xui-aside-column {
+    width: 33.3%;
+    float: left;
+    display: block;
+    text-align: center;
+    > .aside-image {
+      width: 80px;
+      display: inline-block;
+    }
+  }
+}

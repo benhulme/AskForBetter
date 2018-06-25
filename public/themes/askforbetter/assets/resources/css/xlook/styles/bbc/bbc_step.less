@@ -1,0 +1,283 @@
+@import 'bbc_style.less';
+
+.bbc-step {
+  .bbc-style;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'museo-sans-bold';
+  }
+  h3 {
+    margin: 1em 0;
+  }
+  p {
+    font-family: 'museo-sans-semibold';
+  }
+}
+
+/************************************************
+Below is original declarations from broadband-checker project
+**************************************************/
+div[class^='bbc-step-'],
+div[class*=' bbc-step-'],
+.bbc-step {
+  @padding: 1.6em;
+  padding: @padding @padding 0 @padding;
+  background-color: #fff;
+  text-align: center;
+  //font-weight: 300;
+  h1,h2,h3,h4,h5,a {
+    color: #009FE3;
+  }
+
+  h1 { font-size: 2.5em; }
+  h2 { font-size: 2.0em; }
+  h3 { font-size: 1.5em; }
+  h4 { font-size: 1.3em; }
+
+  p {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0 1em;
+    line-height: 1.6em;
+  }
+
+  .leader {
+    p { font-size: 1.1em; }
+  }
+
+
+  
+  // Title icons ____________________________________________________
+
+  .title-icon {
+    margin-top: 2em;
+
+    .icon {
+      background: #009FE3;
+      color: #fff;
+      line-height: 2.2em;
+      width: 2.2em;
+      border-radius: 50%;
+      font-size: 2em;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .title {
+      margin: 0.5em 0 1em 0;
+      color: #666;
+      font-size: 1.3em;
+    }
+  }
+
+
+
+
+  // Collapsible content ____________________________________________
+
+  .collapsible-content {
+    text-align: left;
+    margin: 2em 0;
+    
+    .head {
+      position: relative;
+      color: #fff;
+      background-color: #009FE3;
+      cursor: pointer;
+      
+      h1,h2,h3,h4,h5{
+        color: #fff;
+        font-size: 1.1em;
+        padding: 0.5em 1em;
+        margin: 0;
+        font-weight: 500;
+      }
+
+      &:after {
+        content: "\f067"; // +
+        font-family: "FontAwesome";
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        font-size: 1.4em;
+        line-height: 1em;
+        opacity: 0.7;
+      }
+
+      &:hover:after {
+        opacity: 0.9;
+      }
+    }
+
+    .body {
+      background-color: #eee;
+      font-size: 0.85em;
+      padding: 1.6em 1em;
+      display: none;
+
+      li {
+        margin-top: 1em;
+      }
+    }
+
+    &.expanded {
+      .head:after { content: "\f068"; } // -
+      .body { display: block; }
+    }
+  
+  }
+
+
+  // Highlight areas with arrow _____________________________________
+
+  .highlight, .highlight-alt {
+    font-family: 'museo-sans-semibold';
+    font-size: 1em;
+    color: #fff;
+    background-color: #4f8acc; // dark blue;
+    margin: 2em -1.6em 0 -1.6em;
+    padding: 1em @padding;
+    text-align: center;
+    position: relative;
+    //font-weight: 300;
+
+    h1,h2,h3,h4,h5 {
+      color: #fff;
+      padding: 0;
+      margin: 0.2em;
+    }
+      
+    p { 
+      font-size: 0.95em;
+      color: rgba(255,255,255,0.85);
+
+      strong {
+        color: #fff;
+      }
+    }
+
+    &:before {
+      content: '';
+      border: 1em solid transparent;
+      border-bottom-color: #4f8acc;
+      position: absolute;
+      top: -1.6em;
+      left: 50%;
+      margin-left: -1em;
+    }
+  }
+
+  .highlight-alt {
+    background-color: #38D1C8; // aqua green
+    &:before {
+      border-bottom-color: #38D1C8;
+    }
+  }
+
+
+
+  // Video areas ____________________________________________
+
+  .video {
+    text-align: left;
+    margin: 2em 0;
+
+    h4 {
+      display: none;
+    }
+
+    .embed {
+      height: 0;
+      padding-bottom: 56.25%;
+      position: relative;
+
+      iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0; top: 0;
+      }
+    }
+  }
+
+
+
+
+
+  // Tabs ______________________________________________________
+
+  .tabbed-panes {
+    .tabs {
+      padding: 0;
+      overflow: hidden;
+      margin-bottom: -1px;
+
+      .tab {
+        width: 100%;
+        float: left;
+
+        h2 {
+          font-size: 0.9em;
+          font-weight: normal;
+          border-radius: 0;
+          border: none;
+          border: 1px solid #eaeaea;
+          border-top: 0.2em solid #f6f8fa;
+          border-radius: 2px 2px 0 0;
+          background-color: #f6f8fa;
+          color: #009FE3;
+          padding: 0.6em 1em;
+          text-align: center;
+          cursor: pointer;
+          margin: 0 1px;
+
+          &:hover {
+            background-color: #f2f4f8;
+            border-top-color: #f2f4f8;
+          }
+        }
+      }
+
+      .tab.active {
+        
+        h2 {
+          border-top-color: #009FE3;
+          border-bottom-color: #fff;
+          background-color: #fff;
+          color: #666;
+          cursor: auto;
+        }
+      }
+
+      &.tabs-2 .tab { width: (100 / 2) * 1%; }
+      &.tabs-3 .tab { width: (100 / 3) * 1%; }
+      &.tabs-4 .tab { width: (100 / 4) * 1%; }
+      &.tabs-5 .tab { width: (100 / 5) * 1%; }
+      &.tabs-6 .tab { width: (100 / 6) * 1%; }
+      &.tabs-7 .tab { width: (100 / 7) * 1%; }
+      &.tabs-8 .tab { width: (100 / 8) * 1%; }
+      &.tabs-9 .tab { width: (100 / 9) * 1%; }
+      &.tabs-10 .tab { width: (100 / 10) * 1%; }
+    }
+
+    .panes {
+      margin: 0 1px;
+      border: 1px solid #eaeaea;
+      border-bottom-color: #ccc;
+      padding: 2em;
+      text-align: left;
+      font-size: 1em;
+
+      .pane {
+        
+      }
+    }
+  }
+
+}
+

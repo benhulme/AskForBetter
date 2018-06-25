@@ -1,0 +1,49 @@
+ng2-slider {
+  display: block;
+  .ui-slider.ui-slider-horizontal {
+    height: 26px;
+    margin-top: 7px;
+  }
+  .slider-input-block {
+    display: none;
+  }
+  .range-ribbon {
+    height: 7px;
+    border-radius: 20px;
+    background: @xui-aqua;
+  }
+  .slider-handle {
+    position: absolute;
+    top: -10px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    border: 2px solid @xui-white;
+    border-radius: 50%;
+    background: @xui-aqua;
+    box-shadow: 1px 2px 4px 0 rgba(0,0,0,.4);
+    cursor: pointer;
+  }
+}
+.xui-slider-header {
+  position: relative;
+  padding-left: 0;
+  .xui-clearfix();
+  li {
+    float: left;
+    list-style-type: none;
+    text-align: right;
+    &:first-child {
+      position: absolute;
+      left: 0;
+      text-align: left;
+    }
+    &.last {
+      position: absolute;
+      right: 0;
+    }
+  }
+  &.steps-3 {
+    li { width: 33.33%; }
+  }
+}

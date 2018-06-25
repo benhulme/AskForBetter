@@ -1,0 +1,468 @@
+@import "site";
+
+
+// VDSL OVERRIDES
+.why-vdsl {
+
+	.header-vdsl{
+		background-image: url("../images/vdsl-header-background.jpg");
+		background-repeat: no-repeat;
+	}
+
+	h2{
+		margin-top: 40px;
+	}
+
+	h4 {
+		font-family: MuseoSans300;
+		color: #7d55c7;
+		font-size: 31px;
+	}
+
+	.content{
+
+		.row {
+			margin-top: 50px;
+		}
+
+		.vdsl-icon{
+			margin-left: 20px;
+			margin-top: 35px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+
+	.stats {
+
+		padding-left: 40px;
+		padding-right: 40px;
+
+		h2{
+			font-family: MuseoSans300;
+			font-size: inherit;
+			font-size: 34px;
+			text-align: center;
+
+			margin-top: 75px;
+		}
+
+		.less-buffering-line {
+
+			margin: 75px auto;
+
+			a {
+				margin-top: 50px;
+				color:#35a6e8 !important;
+			}
+		}
+
+		.less-buffering-grid {
+			margin: 75px auto;
+			img {
+				padding: 0 25px 25px 0;
+			}
+		}
+
+	}
+
+	.find-out-more{
+		background-color: #7d55c7;
+		padding: 100px 0;
+		margin-top: 100px;
+
+		h2 {
+			font-size: 42px;
+			font-family: MuseoSans300;
+			color: #fff;
+		}
+	}
+
+	.questions{
+
+		margin-bottom: 100px;
+
+
+		p{
+			font-size: 15px;
+			margin-bottom: 30px;
+		}
+
+		.panel{
+			box-shadow: none;
+		}
+
+		.panel-title{
+			a {
+				text-decoration: none;
+				font-family: MuseoSans500;
+				font-size: 18px;
+				font-weight: normal;
+				color: #7d55c7;
+			}
+		}
+
+
+		.panel-body {
+			border-radius: 0px !important;
+			background-color: #fff;
+			border: none;
+			border: none !important;
+			padding: 0 0 0 10px;
+		}
+
+
+		.panel-heading {
+			position: relative;
+
+			h4 {
+				cursor: pointer;
+				font-family: MuseoSans500;
+				font-size: 18px;
+				font-weight: normal;
+				color: #7d55c7;
+			}
+
+		}
+
+		.panel-heading[data-toggle="collapse"] {
+
+
+		}
+		.panel-heading[data-toggle="collapse"].collapsed {
+			/* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+
+			.arrow-down {
+				-webkit-transform: rotate(-90deg);
+				-moz-transform:    rotate(-90deg);
+				-ms-transform:     rotate(-90deg);
+				-o-transform:      rotate(-90deg);
+				transform:         rotate(-90deg);
+			}
+		}
+
+		.arrow-down {
+			margin: 10px;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+
+			border-top: 10px solid #7d55c7;
+		}
+	}
+
+
+
+}
+
+@media (max-width: 991px) {
+
+
+	.why-vdsl {
+
+		.header-vdsl{
+			background-image: url("../images/vdsl-mobile-header.jpg");
+			background-repeat: no-repeat;
+		}
+
+
+
+		h2 {
+			font-size: 52px;
+		}
+
+		h4{
+			text-align: center;
+			font-size: 45px;
+		}
+		p {
+			text-align: center;
+			font-size: 26px;
+		}
+
+		.find-out-more{
+			padding: 80px 40px 70px 40px;
+			h2 {
+				text-align: center;
+			}
+		}
+
+
+		.vdsl-icon{
+			margin-left: 0px;
+			margin-bottom: 20px;
+
+		}
+
+		.icon-holder{
+			text-align: center;
+		}
+
+		.less-buffering-line {
+			display: none;
+		}
+
+		.less-buffering-grid {
+			display: block;
+			margin-bottom: 65px;
+		}
+
+		.stats {
+
+			padding-left: 40px;
+			padding-right: 40px;
+
+			h2 {
+				font-size: 45px;
+			}
+
+			p{
+				font-size: 26px;
+			}
+		}
+
+		.questions {
+
+			h2 {
+				font-family: MuseoSans300;
+				font-size: 45px;
+				margin-bottom: 30px;
+			}
+
+
+			p {
+				text-align: left;
+				font-size: 28px;
+				padding-left: 5px;
+			}
+
+
+			.panel-heading {
+				position: relative;
+
+				.panel-title{
+					text-align: left !important;
+				}
+
+				h4 {
+					font-size: 30px;
+					text-align: left;
+
+				}
+
+			}
+
+		}
+	}
+
+
+
+}
+@media (min-width: 990px) {
+	.why-vdsl {
+		.less-buffering-line {
+			display: flex;
+			max-width: 1065px;
+			justify-content: space-between;
+		}
+		.less-buffering-grid{
+			display: none;
+		}
+	}
+}
+
+/* BBChecker Override Styles */
+
+h2 {
+  padding-top: 25px;
+}
+
+/* Resize container for the checker in our page */
+div#bbCheckerContent div.bbc-inner {
+  max-width: 800px;
+}
+/* Hide border causing line when empty search results */
+div.bbc-address-autocomplete ul.ar-suggestions {
+  border: 0px;
+}
+/* Fix Measure Text Color */
+div.bbc-step-dials div.disclaimer.current h3 {
+  color: #000;
+}
+/* Move Expand symbol to bottom of box */
+div.bbc-step-consent div.collapsible-content div.head:after {
+  top: 60%;
+  right: 48.8%;
+}
+/* Fix alignments and padding for accordion */
+div[class^='bbc-step-consent'] {
+  margin: 0px !important;
+}
+div[class^='bbc-step-consent'] div.collapsible-content div.head {
+  padding-bottom: 25px;
+  background-color: #36A8FC;
+}
+div[class^='bbc-step-consent'] div.collapsible-content div.head h3 {
+  text-align: center;
+}
+/* Fix text alignment issue caused by integration */
+div.bbc-step-build.row > p {
+  margin-top: 50px;
+  font-size: 14px;
+}
+/* Fix heading & paragraph margins for mobile */
+@media(max-width: 768px) {
+  div[class^='bbc-step-'] .dials-info h2,
+  div[class^='bbc-step-'] .lead h2,
+  div[class^='bbc-step-'] .content h2 {
+    margin: auto;
+    margin: 0px 15px 0 15px;
+  }
+  div[class^='bbc-step-'] .dials-info p,
+  div[class^='bbc-step-'] .lead p,
+  div[class^='bbc-step-'] .content p {
+    margin: auto;
+    font-size: 14px;
+    margin: 0px 15px 0 15px;
+  }
+}
+/* Tidy up colored sections */
+div[class^='bbc-step-'] div.highlight {
+  background-color: #36A8FC;
+}
+div.bbc-step div.highlight-alt {
+  margin: 0;
+}
+div[class^='bbc-step-'] div.highlight,
+div[class^='bbc-step-'] div.highlight-alt {
+  margin: 2em 0 2em 0 !important;
+  padding: 2em 0px;
+}
+/* Switch tip from top to bottom for top colored section */
+div[class^='bbc-step-'] div.highlight:before {
+  border-bottom-color: #36A8FC;
+  transform: rotate(180deg);
+  bottom: -1.6em;
+  top: auto;
+}
+/* Button fix */
+div.bbc-step-providers .panel .providers .providers-buttons-wrapper button {
+    text-transform: none;
+    margin: 1em;
+}
+.chorus-btn.chorus-btn-blue {
+  color: #fff;
+  background-color: #36A8FC;
+  border-color: #36A8FC;
+}
+.chorus-btn {
+  padding: .4em;
+  background: white;
+  text-transform: uppercase;
+  color: #36A8FC;
+  height: 2.7em;
+  min-width: 167px;
+  font-family: 'MuseoSans500';
+  box-shadow: none !important;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0.33em 1.45em;
+  font-size: 0.9em;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.chorus-btn:hover {
+  background-color: #36A8FC;
+  color: #fff;
+  border: none;
+}
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Nav Button fix */
+#stickyNavigation .search-address-form .btn-address-search-action {
+	float: none;
+}
+
+@media (max-width: 991px) {
+	/* Copy font size changes for VDSL page */
+	.why-vdsl .stats h2,
+	.why-vdsl h4,
+	.why-vdsl .questions h2 {
+	    font-size: 32px;
+	}
+	.why-vdsl .questions .panel-heading .panel-title {
+		font-size: 24px;
+	}
+	.why-vdsl .stats p,
+	.why-vdsl .content p,
+	.why-vdsl .questions p {
+	    font-size: 20px;
+	}
+	/* Margin for bottom of loading images */
+	.why-vdsl .stats .less-buffering-grid img {
+	    padding: 0px;
+	    max-width: 35%;
+	}
+	.why-vdsl .stats .less-buffering-grid {
+	    margin: 75px 0 15px 0;
+	}
+	.why-vdsl .vdsl-icon {
+	    margin: 0 15px 15px 15px;
+	}
+	/* Video section padding/margins */
+	.why-vdsl .find-out-more {
+	    padding: 40px;
+	}
+	.why-vdsl h2 {
+	    margin-top: 0px;
+	    font-size: 42px;
+	}
+	.why-vdsl .find-out-more h2 {
+			margin-top: 0px;
+	    margin-bottom: 40px;
+	}
+}
+
+/* build 2.5 changes */
+.bbc-step-process .process-list ul li {
+  padding: 5px;
+}
+.bbc-step-process .process {
+  max-width: 100%;
+}
+.bb-container {
+  padding-top: 2em;
+}
+div[class^='bbc-step-consent'] div.collapsible-content div.head {
+  padding-bottom: 0.75em;
+}
+.bbc-address .bbc-address-input .wrapper {
+	padding: 0px;
+}
+.content-blade {
+  background-position: center;
+}
+header h1 {
+	text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+}
+@media(max-width: 768px) {
+	header.header-data-speed-calculator {
+		background-position: center;
+	}
+}

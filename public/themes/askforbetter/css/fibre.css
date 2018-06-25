@@ -1,0 +1,540 @@
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */
+h2, h3, h4 {
+    color: #7d55c7;
+}
+h2 {
+    font-family: MuseoSans500;
+    font-size: 34px;
+}
+h2.subtitle {
+    font-family: MuseoSans300;
+	font-size: 34px;
+	padding-top: 0px;
+}
+h2.subtitle-small {
+    font-family: MuseoSans300;
+	font-size: 26px;
+	color: #434343;
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+	margin: 0;
+}
+h3 {
+    font-family: MuseoSans300;
+    font-size: 31px;
+}
+h5 {
+    font-family: MuseoSans300;
+    font-size: 19px;
+}
+p {
+    font-family: MuseoSans300;
+    font-size: 16px;
+}
+a.text-underline {
+    text-decoration: underline;
+}
+a.text-underline:hover {
+    text-decoration: none;
+}
+a.text-bold {
+    font-family: MuseoSans500;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -68px;
+    visibility: hidden;
+}
+.fibre-page .container-fluid{
+    padding-left: 0rem;
+    padding-right: 0rem;
+    overflow: hidden;
+}
+.fibre-page .container-fluid .row {
+    margin: auto;
+}
+@media screen and (max-width: 991px) {
+    h2.subtitle {
+		font-size: 25px;
+    }
+    h2.subtitle-small {
+		font-size: 22px;
+    }
+}
+
+/* PAGE HEADER */
+.header-fibre {
+    position: relative;
+    background-image: url(../images/fibre-header-bg-1200.jpg);
+    background-position: top center;
+}
+.header-fibre-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);
+	width: 90%;
+}
+.header-fibre-container p.fibre-heading {
+    font-family: MuseoSans700;
+    font-size: 26px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.38);
+    color: #fff;
+}
+.header-fibre-container .btn {
+    padding: 10px 18px;
+	margin: 4px 3px;
+    font-size: 16px;
+}
+.mobile-break {
+    display: none;
+    height: 2px;
+}
+.mobile-break br {
+    margin-bottom: -2px;
+}
+@media screen and (min-width: 1501px) {
+	.header-fibre {
+		background-image: url(../images/fibre-header-bg-1920.jpg);
+	}
+    .header-fibre-container {
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 1500px) {
+	.header-fibre {
+		background-image: url(../images/fibre-header-bg-1500.jpg);
+	}
+    .header-fibre-container {
+        padding-top: 38px;
+    }
+}
+@media screen and (max-width: 1200px) {
+	.header-fibre {
+		background-image: url(../images/fibre-header-bg-1200.jpg);
+	}
+}
+@media screen and (max-width: 991px) {
+	.header-fibre {
+		background-image: url(../images/fibre-header-bg-991.jpg);
+	}
+    .header-fibre-container .btn {
+        padding: 9px 16px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 767px) {
+	.header-fibre {
+		background-image: url(../images/fibre-header-bg-767.jpg);
+	}
+}
+@media screen and (max-width: 600px) {
+	.header-fibre {
+		background-image: url(../images/fibre-header-bg-600.jpg);
+    }
+    .mobile-break {
+        display: block;
+    }
+    .header-fibre-container {
+        padding-top: 12px;
+    }
+}
+@media screen and (max-width: 551px) {
+    .header-fibre-container {
+        width: 95%;
+    }
+    .header-fibre-container p.fibre-heading {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .header-fibre {
+        background-image: url(../images/fibre-header-mobile414.jpg);
+    }
+}
+@media screen and (max-width: 375px) {
+    .header-fibre {
+        background-image: url(../images/fibre-header-mobile375.jpg);
+    }
+    .header-fibre-container {
+        padding-top: 29px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .header-fibre {
+        background-image: url(../images/fibre-header-mobile320.jpg);
+    }
+    .header-fibre-container p.fibre-heading {
+        font-size: 20px;
+    }
+    .header-fibre-container {
+        padding-top: 20px;
+    }
+}
+/* PAGE HEADER END */
+
+/* WHY FIBRE HEADER */
+.why-fibre-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+/* WHY FIBRE HEADER END */
+
+/* WHY FIBRE */
+.why-fibre {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.why-fibre img.fibre-icon {
+    height: 100px;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 991px) {
+    .why-fibre-feature-container {
+        margin-bottom: 90px;
+    }
+    .note.note-smaller {
+        padding-top: 0px;
+	}
+	.why-fibre img.fibre-icon {
+		margin-bottom: 0px;
+	}
+}
+/* WHY FIBRE END */
+
+/* FIBRE VIDEOS */
+.fibre-speed-videos {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+.fibre-speed-videos p {
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 991px) {
+    .fibre-speed-videos h2 {
+        font-family: MuseoSans300;
+    }
+}
+/* FIBRE VIDEOS END */
+
+/* BROADBAND CHECKER */
+.can-i-get-fibre {
+    padding-top: 90px;
+    padding-bottom: 120px;
+    background-color: #7d55c7;
+    color: #fff;
+}
+.can-i-get-fibre h2.subtitle,
+.can-i-get-fibre p {
+    color: #fff;
+}
+.can-i-get-fibre input[type=text] {
+    color: #000;
+}
+/* BROADBAND CHECKER END */
+
+/* GETTING FIBRE */
+.container.getting-fibre {
+    padding-top: 80px;
+}
+.getting-fibre p {
+    margin-bottom: 60px;
+}
+/* GETTING FIBRE END */
+
+/* FIBRE DWELLINGS */
+.fibre-dwellings {
+    margin-bottom: 90px;
+}
+.dwelling-heading {
+    height: 60px;
+    position: relative;
+}
+.dwelling-heading .dwelling-image-container {
+    float: left;
+    height: 60px;
+    width: 60px;
+    text-align: left;
+    position: relative;    
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+.dwelling-heading .dwelling-image-container img {
+    height: 100%;
+}
+.dwelling-title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+.dwelling-title h2.subtitle {
+    color: #000;
+    text-align: left;
+    margin: 0 0 -5px 0;
+    padding: 0;
+}
+.dwelling-title h2.subtitle-small {
+	padding-bottom: 0px !important;
+}
+.dwelling-title .sdu-title {
+    margin-left: 25px;
+}
+.dwelling-title .mdu-title {
+    margin-left: 15px;
+}
+.dwelling-content {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.dwelling-content p {
+    margin-bottom: 30px;
+}
+.dwelling-content .btn {
+    padding: 10px 36px;
+}
+.dwelling-video-container {
+    margin-top: 45px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+.mdu, .sdu {
+    padding: 0 45px;
+}
+@media screen and (max-width: 1200px) {
+    .mdu, .sdu {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .dwelling-heading {
+        height: 120px;
+    }
+    .dwelling-heading .dwelling-image-container {
+        float: none;
+        margin-bottom: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    .dwelling-title {
+        margin-top: 10px;
+        position: relative;
+        width: 100%;
+    }
+    .dwelling-title h2.subtitle,
+    .dwelling-content {
+        text-align: center;
+	}
+	.dwelling-title h2.subtitle-small {
+		padding-bottom: 20px !important;
+	}
+    .dwelling-title .sdu-title,
+    .dwelling-title .mdu-title {
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+    .dwelling-content p {
+        text-align: center;
+    }
+    .dwelling-video-container {
+        margin-bottom: 75px;
+    }
+	.dwelling-content p {
+		margin-top: 15px;
+	}
+    .mdu, .sdu {
+        padding: 0 15px;
+    }
+}
+/* FIBRE DWELLINGS END */
+
+/* ORDERING FIBRE */
+.ordering-fibre {
+    padding-top: 60px;
+    padding-bottom: 53px;
+}
+.ordering-fibre h2 {
+    padding-bottom: 45px;
+}
+.ordering-fibre h2.subtitle {
+	color: #000;
+	padding-bottom: 0px;
+    margin-bottom: 15px;
+}
+.ordering-fibre-item {
+    margin-bottom: 60px;
+}
+.ordering-fibre-item p {
+    margin-bottom: 20px;
+}
+.ordering-fibre-link-container .fibre-providers-container {
+    background-color: #35a6e8;
+    border-radius: 36px;
+    padding: 8px 18px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+.ordering-fibre-link-container .fibre-providers-container:focus {
+    outline: none;
+}
+.ordering-fibre-link-container .fibre-providers-container:hover {
+    background-color: #407ec9;
+}
+.ordering-fibre-link-container .fibre-providers-container i.dropdown {
+    position: absolute;
+    right: 19px;
+    top: 9px;
+    pointer-events: none;
+}
+.ordering-fibre-link-container .fibre-providers-container.active {
+    top: 4px;
+}
+.ordering-fibre-link-container .fibre-providers-container i.dropdown:after {
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    content: '';
+    display: inline-block;
+    height: 13px;
+    left: 0;
+    vertical-align: top;
+    width: 13px;
+    transform: rotate(135deg);
+    color: #fff;
+}
+.ordering-fibre-link-container select#fibre-providers {
+    color: #fff;
+    background-color: transparent;
+    border: 0px;
+	padding-right: 40px;
+	font-size: 16px;
+	font-family: MuseoSans500;
+}
+.ordering-fibre-link-container select#fibre-providers:focus {
+    outline: none;
+}
+.ordering-fibre-link-container select#fibre-providers::-ms-expand {
+    display: none;
+}
+.ordering-fibre-link-container select#fibre-providers {
+    -webkit-appearance: none;
+    -moz-appearance: none;   
+}
+.ordering-fibre-link-container select:required:invalid {
+    color: gray;
+}
+.ordering-fibre-link-container option[value=""][disabled] {
+    display: none;
+}
+.ordering-fibre-link-container option {
+    color: black;
+}
+.ordering-fibre-link-container .btn[disabled] {
+    background-color: #b5b5b5;
+}
+.ordering-fibre-link-container .btn {
+    padding: 10px 18px;
+    margin: 7px 7px;
+}
+.ordering-fibre-link-container #fibre-providers-go {
+    margin-left: 14px;
+}
+@media screen and (max-width: 991px) {
+    .ordering-fibre h2 {
+        font-family: MuseoSans300;
+    }
+}
+@media screen and (max-width: 514px) {
+	/* Break where ok button drops down */
+	.ordering-fibre-link-container #fibre-providers-go {
+		margin-top: 14px;
+	}
+}
+@media screen and (max-width: 415px) {
+    .ordering-fibre-link-container select#fibre-providers {
+        font-size: 14px;
+    }
+    .ordering-fibre-link-container .fibre-providers-container {
+        display: inherit;
+    }
+}
+@media screen and (max-width: 350px) {
+	.ordering-fibre-link-container .fibre-providers-container i.dropdown {
+		top: 12px;
+	}
+    .ordering-fibre-link-container .fibre-providers-container i.dropdown:after {
+        border-width: 1px 1px 0 0;
+        height: 10px;
+        width: 10px;
+    }
+    .ordering-fibre-link-container select#fibre-providers {
+        font-size: 11px;
+    }
+}
+/* ORDERING FIBRE END */
+
+/* 7 WAYS BEST */
+.fibre-7-ways-best {
+    padding-top: 45px;
+    background-color: #7d55c7;
+    color: #fff;
+}
+.fibre-7-ways-best h2,
+.fibre-7-ways-best h2.subtitle {
+    color: #fff;
+}
+.fibre-7-ways-best h2 {
+    margin-bottom: 60px;
+}
+.fibre-7-ways-best p {
+    color: #fff;
+    text-align: left;
+}
+.fibre-7-ways-item-container {
+    margin-bottom: 30px;
+}
+.fibre-7-ways-item-container .media-body p {
+	margin-left: 30px;
+}
+.fibre-7-ways-item img {
+    width: 40px;
+}
+@media screen and (max-width: 991px) {
+	.fibre-7-ways-item-container .media-body p {
+		margin-left: 15px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.fibre-7-ways-item-container .media-body p {
+		margin-left: 0px;
+	}
+}
+/* 7 WAYS BEST END */
+
+/* COMMON QUESTIONS */
+.fibre-questions {
+    padding: 60px 0;
+}
+.fibre-questions h2.subtitle {
+    color: #000;
+    margin-bottom: 0px;
+}
+.fibre-questions p {
+    margin-bottom: 30px;
+}
+.fibre-questions-link-container {
+    margin-bottom: 30px;
+}
+.fibre-questions .btn {
+    padding: 10px 18px;
+    margin: 7px 7px;
+}
+/* COMMON QUESTIONS END */

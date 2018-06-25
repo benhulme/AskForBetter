@@ -1,0 +1,13 @@
+﻿//Prevent IOS zooming in. (It can erroenously stay zoomed-in after bluring inputs)
+//http://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone
+@media only screen and
+(-webkit-min-device-pixel-ratio:0) //Target just Chrome & Safari
+and (max-device-width : 1024px)  {
+  .form-control {
+    font-size: 16px;
+    &.input-lg {
+      //Must re-iterate this declaration to take priority over the preceeding.
+      font-size: @xui-font-size-large;
+    }
+  }
+}

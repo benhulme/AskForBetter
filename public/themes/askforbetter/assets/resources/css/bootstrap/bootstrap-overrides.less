@@ -1,0 +1,16 @@
+﻿//Unfortunately we can't override everything in Bootstrap, by overriding
+//it's dependent variables, as it doesn't use variables for everything
+//For these situations, we override it manually
+p {
+  margin-bottom: @xui-paragraph-margin-bottom;
+}
+.alert > p {
+  margin-bottom: (@xui-line-height-computed / 2);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+label {
+  margin-bottom: @xui-label-margin-bottom;
+  font-weight: @xui-label-font-weight;
+}

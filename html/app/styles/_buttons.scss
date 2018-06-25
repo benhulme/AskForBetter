@@ -1,0 +1,93 @@
+.btn, input.btn {
+  background-color: $chorus_blue;
+  line-height: 100%;
+  color: #fff;
+  font-family: $MuseoSans500;
+  border-radius: 36px;
+  transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+  text-decoration: none;
+
+  -webkit-appearance: none;
+  outline: none;
+  padding: 10px 18px;
+  font-size: 14px;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 16px;
+    padding: 18px 52px;
+
+  }
+
+  transition: all 200ms cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+
+  &:visited {
+
+    color: #fff;
+  }
+
+
+  &:focus {
+    -webkit-appearance: none;
+    outline: none;
+    outline:0;
+    color: #fff;
+    background-color: $chorus_dark_blue;
+  }
+
+  &:hover, &:active {
+    color: #fff;
+    background-color: $chorus_dark_blue;
+  }
+
+  &.btn-address-search-action {
+
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+
+
+
+    @media (max-width: $screen-xs-max) {
+      position: absolute;
+      top: 0;
+      right: 5px;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -1px;
+
+      &:before {
+        font-family: FontAwesome;
+        content: "\f054";
+        margin-top: 2px;
+        display: block;
+        margin-left: 2px;
+      }
+    }
+  }
+
+  &.btn-back-to-top {
+    display: block;
+    border: none;
+    background-color: $chorus_dark_blue;
+
+    border-radius: 4px;
+    padding: 8px;
+
+    @media (min-width: $screen-md-min) {
+      padding: 8px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      padding: 12px;
+    }
+
+    @media (min-width: $screen-xl-min) {
+      padding: 16px;
+    }
+  }
+}
+

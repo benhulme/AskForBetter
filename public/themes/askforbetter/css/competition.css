@@ -1,0 +1,215 @@
+
+/* Form Styling */
+span.form-required {
+  color: #f00;
+}
+form#Form_EntryForm input[type="text"],
+form#Form_EntryForm input[type="email"] {
+  margin-bottom: 30px;
+  padding: 10px;
+  border: solid 1px #9b9b9b;
+  border-radius: 5px;
+}
+form#Form_EntryForm select {
+  margin-bottom: 30px;
+  height: 45px;
+}
+form#Form_EntryForm input[type=checkbox] {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+form#Form_EntryForm div.field label {
+  font-size: 12px;
+}
+form#Form_EntryForm div#Form_EntryForm_NewsletterOptin_Holder label,
+form#Form_EntryForm div#Form_EntryForm_AcceptTCs_Holder label {
+  padding-left: 25px;
+  font-size: 12px;
+}
+form#Form_EntryForm div#Form_EntryForm_AcceptTCs_Holder label a {
+  color: #009ee6;
+  text-decoration: underline;
+  position: relative;
+  z-index: 9999;
+}
+form#Form_EntryForm div.Actions input#Form_EntryForm_action_cancelForm {
+  border: 1px solid #9b9b9b;
+  background-color: transparent;
+  color: #9b9b9b;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+form#Form_EntryForm div.Actions input#Form_EntryForm_action_cancelForm:hover {
+  border-color: #35a6e8;
+  color: #fff;
+  background-color: #35a6e8;
+}
+form#Form_EntryForm div.Actions input#Form_EntryForm_action_submitForm,
+form#Form_EntryForm div.Actions input#Form_EntryForm_action_cancelForm {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+form#Form_EntryForm div.Actions {
+  text-align: center;
+}
+header.header-competition {
+  background-image: url(../images/competition-header-background.jpg);
+}
+@media(max-width: 768px) {
+  header.header-competition {
+    background-image: url(../images/competition-header-background-mobile@2x.jpg);
+    background-position: center;
+  }
+}
+a p.competition-back-link {
+  color: #7d55c7;
+  text-decoration: none;
+}
+a p.competition-back-link:hover {
+  color: #7d55c7;
+  text-decoration: underline;
+}
+span.message.bad {
+  top: -20px;
+  position: relative;
+  color: #f00;
+}
+
+/* Social Sharing */
+p.competition-share {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+div.competition-social-share {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+div.competition-social-share div {
+  float: left;
+  border-radius: 20px;
+  margin: 10px 5px;
+  font-size: 16px;
+  color: #fff;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+div.competition-social-share div#share-facebook {
+  border: 1px solid #3b5998;
+  background-color: #3b5998;
+  padding: 8px 16px;
+}
+div.competition-social-share div#share-facebook:hover {
+  background-color: transparent;
+  color: #3b5998;
+}
+div.competition-social-share div#share-twitter {
+  border: 1px solid #55acee;
+  background-color: #55acee;
+  padding: 8px 12px;
+}
+div.competition-social-share div#share-twitter:hover {
+  background-color: transparent;
+  color: #55acee;
+}
+div.competition-social-share div#share-email {
+  border: 1px solid #16d3c9;
+  background-color: #16d3c9;
+  padding: 8px 11px;
+}
+div.competition-social-share div#share-email:hover {
+  background-color: transparent;
+  color: #16d3c9;
+}
+
+/* How to guides */
+div.competition-howto-container {
+  width: 100%;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+div.competition-howto-item {
+  width: 100%;
+  max-width: 300px;
+  border: solid 1px #bbb;
+  box-shadow: 0 4px 2px -2px rgba(187,187,187,0.6);
+  padding: 1em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+div.competition-howto-container div.competition-howto-item.first-item {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: -1px;
+}
+div.competition-howto-container div.competition-howto-item.last-item {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left: -1px;
+}
+@media(max-width: 991px) {
+  div.competition-howto-container div.competition-howto-item.center-item {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  div.competition-howto-container div.competition-howto-item.last-item {
+    border-radius: 5px !important;
+    margin-left: 0px;
+  }
+}
+@media(max-width: 628px) {
+  div.competition-howto-item {
+    border-radius: 5px !important;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+div.competition-howto-item-image {
+  width: 100%;
+  height: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.broadband-data {
+  background-image: url(../images/broadband-data.png);
+}
+div.broadband-speed {
+  background-image: url(../images/broadband-speed.png);
+}
+div.broadband-options {
+  background-image: url(../images/broadband-options.png);
+}
+div.competition-howto-item h3 {
+  color: #7d55c7;
+  font-size: 24px;
+}
+div.competition-howto-item a {
+  color: #9b9b9b;
+  text-decoration: underline;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+div.competition-howto-item a:hover {
+  color: #7d55c7;
+  text-decoration: none;
+  cursor: pointer;
+}

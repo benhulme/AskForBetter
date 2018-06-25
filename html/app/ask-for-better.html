@@ -1,0 +1,304 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>html</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDrBkTwzJJ3lzu8ddK6D9bPO_6Y5ILIMpc"></script>
+
+    <script>
+      var chorus = window.chorus || {};
+    </script>
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Navigation Start -->
+    <div class="nav-main" id="stickyNavigation">
+      <div class="container-fluid no-padding-right no-padding-left">
+        <nav>
+          <ul class="hidden-xs">
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="ask-for-better.html">Ask for Better</a></li>
+            <li><a href="data-and-speed-calculator.html">Data & Speed Calculator</a></li>
+            <li><a href="how-to-guides.html">How To Guides</a></li>
+          </ul>
+
+          <div class="search-address-form">
+            <input type="text" class="search-address-text-input" id="autocomplete3">
+            <input type="submit" class="btn btn-address-search-action hidden-xs" value="Ask for better">
+            <button class="btn btn-address-search-action visible-xs mobile-btn"></button>
+          </div>
+
+          <!--<ul class="visible-xs">-->
+          <!--<li><a href="ask-for-better.html">Ask for Better</a></li>-->
+          <!--<li><a href="data-and-speed-calculator.html">Data & Speed Calculator</a></li>-->
+          <!--<li><a href="how-to-guides.html">How To Guides</a></li>-->
+          <!--<li><a href="broadband-providers.html">Broadband Providers</a></li>-->
+          <!--</ul>-->
+        </nav>
+
+      </div>
+      <div class="container logo-wrap">
+        <div class="ask-for-better-logo"><img src="images/askforbetter-logo.svg" class="image-responsive"></div>
+        <div class="chorus-logo"><img src="images/chorus-logo.svg" class="image-responsive"></div>
+        <div class="better-is-here-logo"><img src="images/better-is-here-logo.png" class="full-width"></div>
+        <!--<a href="/" title="Chorus">-->
+        <!--<div class="chorus-logo"></div>-->
+        <!--</a>-->
+
+        <button id="mobileMenuToggleButton">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </button>
+      </div>
+    </div>
+
+    <div id="navigationOverlay">
+      <div class="background-filler"></div>
+      <div class="list-items-wrap">
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="ask-for-better.html">Ask for Better</a></li>
+          <li><a href="data-and-speed-calculator.html">Data & Speed Calculator</a></li>
+          <li><a href="how-to-guides.html">How To Guides</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- Navigation End -->
+
+    <div class="site-scroll-wrap">
+      <main class="no-margin-top">
+
+      <!-- <div id="noAddressSplash">
+          <div class="no-address-wrap">
+            <div class="search-address-form-wrap">
+              <h1 class="color-white text-shadow-black">Are you one of 1.4 million kiwis who can get better broadband right now?</h1>
+              <div class="search-address-form">
+                <form>
+                <input type="text" class="search-address-text-input do-ga-track" data-gaprop='{"category":"addresscheckbbchecker", "action":"click", "label":""}' placeholder="Enter your address" id="autocomplete">
+                <input type="submit" class="btn btn-address-search-action hidden-xs" value="Ask for better">
+                <button class="btn btn-address-search-action visible-xs mobile-btn"></button></form>
+              </div>
+            </div>
+          </div>
+      </div> -->
+
+      <div class="content" id="bbCheckerContent">
+
+        <!-- Ask for Better content Start -->
+        <div class="container" id="navigationDockPoint">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+
+            </div>
+          </div>
+        </div>
+        <!-- Ask for Better content End -->
+
+        <!-- BBC blade Start -->
+        <div class="container-fluid no-padding-left no-padding-right">
+          <div class="content-blade content-blade-bbc">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="blade-flex-content-outer">
+                    <div class="blade-flex-content">
+                      <h3 class="color-black">Want to know more about your broadband options?</h3>
+                      <a href="/how-to-guides" class="btn btn-standard">Find out more</a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BBC blade End -->
+
+        <!-- How To Guides Start -->
+        <div class="container padme-out">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2>How to guides</h2>
+              <p>Simple things you can do around your place to help get the best out of your online experience and connection.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row do-grid floating-grid">
+            <div class="grid-item">
+              <div class="preview preview-item-video" style="background-image: url('images/preview-item-09.png')" data-videoplatform="vimeo" data-videoid="210659906">
+                <img src="images/video-scaler.png" class="video-scaler" />
+                <button class="preview-play-button"></button>
+              </div>
+              <p><a href="https://blog.chorus.co.nz/the-gig-the-best-of-the-best/" target="_blank" title="The Gig">The Gig</a></p>
+            </div>
+
+            <div class="grid-item">
+              <div class="preview preview-item-video" style="background-image: url('images/preview-item-12.png')" data-videoplatform="vimeo" data-videoid="210659906">
+                <img src="images/video-scaler.png" class="video-scaler" />
+                <button class="preview-play-button"></button>
+              </div>
+              <p><a href="https://blog.chorus.co.nz/the-gig-the-best-of-the-best/" target="_blank" title="What impacts your speed?">What impacts your speed?</a></p>
+            </div>
+
+            <div class="grid-item">
+              <div class="preview preview-item-video" style="background-image: url('images/preview-item-10.png')" data-videoplatform="vimeo" data-videoid="210659906">
+                <img src="images/video-scaler.png" class="video-scaler" />
+                <button class="preview-play-button"></button>
+              </div>
+              <p><a href="https://blog.chorus.co.nz/what-the-tech-broadband-connection-types-explained" target="_blank" title="ADSL vs VDSL">ASDL vs VDSL</a></p>
+            </div>
+
+            <div class="grid-item">
+              <div class="preview preview-item-video" style="background-image: url('images/preview-item-11.png')" data-videoplatform="vimeo" data-videoid="210659906">
+                <img src="images/video-scaler.png" class="video-scaler" />
+                <button class="preview-play-button"></button>
+              </div>
+              <p><a href="https://blog.chorus.co.nz/check-your-speed" target="_blank" title="Better WiFi">Better WiFi</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container padme-out">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <a href="/how-to-guides" title="See all guides" class="btn btn-standard">See all guides</a>
+            </div>
+          </div>
+        </div>
+        <div class="container padme-out"></div>
+        <!-- How To Guides End -->
+
+
+      </div>
+
+
+
+      </main>
+
+      <!-- Footer Start -->
+      <footer>
+        <div class="footer-upper">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="logo-wrap">
+                  <a href="#" title=""><img src="images/chorus-logo.svg" class="image-responsive"></a>
+                </div>
+
+              </div>
+              <div class="col-lg-9" style="position: relative">
+                <a href="/" class="chorus-direct-link">Chorus Website</a>
+
+                <div class="social-links">
+                  <ul>
+                    <li><a href="http://www.facebook.com/pages/Chorus/232281130146993" title="Facebook" class="facebook"></a></li>
+                    <li><a href="https://twitter.com/ChorusNZ" title="Twitter" class="twitter"></a></li>
+                    <li><a href="http://www.linkedin.com/company/chorus-nz-limited" title="LinkedIn" class="linkedin"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-lower">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <ul>
+                  <li><a href="ask-for-better.html">Ask for Better</a></li>
+                  <li><a href="data-and-speed-calculator.html">Data & Speed Calculator</a></li>
+                  <li><a href="how-to-guides.html">How To Guides</a></li>
+                  <li><a href="broadband-providers.html">Broadband Providers</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Footer End -->
+    </div>
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+    <script src="/bower_components/js-cookie/src/js.cookie.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/component-address.js"></script>
+    <script src="scripts/ask-for-better.js"></script>
+    <!-- endbuild -->
+
+    <script>
+      var common = new chorus.Common();
+      var askForBetter = new chorus.AskForBetter();
+      var componentAddress = new chorus.ComponentAddress();
+
+      componentAddress.ComponentAddress();
+      askForBetter.AskForBetter();
+      common.Common();
+    </script>
+  </body>
+</html>

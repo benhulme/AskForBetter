@@ -1,0 +1,82 @@
+html {
+  &.is-ie {
+    .nav-main  {
+
+      .better-is-here-logo {
+        img {
+          width: 157px;
+        }
+      }
+
+      .ask-for-better-logo {
+        img {
+          width: 242px;
+        }
+      }
+
+      .chorus-logo {
+        img {
+          width: 80px;
+        }
+      }
+
+
+    }
+
+    .navigation-overlay-footer {
+      .chorus-logo {
+        img {
+          width: 165px;
+          //height: 55px;
+        }
+      }
+    }
+
+    .plan-column-wrap {
+
+      .plan-info-bubble {
+        svg {
+          width: 240px;
+          height: 240px;
+
+          @media (min-width: $screen-sm-min) {
+            width: 118px;
+            height: 118px;
+          }
+
+          @media (min-width: $screen-md-min) {
+            width: 162px;
+            height: 162px;
+          }
+
+          @media (min-width: $screen-lg-min) {
+            width: 202px;
+            height: 202px;
+          }
+
+          @media (min-width: $screen-xl-min) {
+            width: 236px;
+            height: 236px;
+          }
+        }
+      }
+
+    }
+
+    #noAddressSplash {
+      .search-address-form-wrap {
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+    }
+
+    .footer-upper {
+      .logo-wrap {
+        img {
+          width: 172px;
+        }
+
+      }
+    }
+  }
+}

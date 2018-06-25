@@ -1,0 +1,14 @@
+﻿@import "mixins.less";
+.container-fluid-max {
+  .xui-container-fixed();
+  max-width: @xui-max-container-width;
+}
+.content-container {
+  .xui-container-fixed();
+  max-width: @xui-content-max-width;
+}
+.off-screen {
+  position: fixed !important;
+  top:-9999px !important;
+  left: -9999px !important;
+}

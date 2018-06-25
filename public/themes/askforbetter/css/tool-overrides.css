@@ -1,0 +1,238 @@
+.section-highlighted{
+  background-color: #f9fafc;
+}
+.section-highlighted .bbc-inner {
+    max-width: 736px;
+    margin: 50px auto 0;
+}
+
+.step{
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.2);
+}
+
+.step-actions{
+      padding: 25px 0 100px;
+    display: block;
+}
+
+button.next {
+    float: right;
+}
+
+.bbc-button .fa-chevron-right{
+    display:none;
+}
+
+.bbc-button .fa-chevron-left{
+    display:none;
+}
+
+.bbc-button {
+  border-radius: 36px;
+  outline: none;
+  border: 1px solid #009FE3;
+  background-color: #009FE3;
+  color: #fff;
+  text-shadow: none;
+  padding: 12px 18px 8px;
+  text-align: left;
+  font-size: 0.9em;
+  box-shadow: none;
+}
+
+.bbc-button span {
+    font-family: MuseoSans500,sans-serif;
+    font-size: 14px;
+}
+
+.bbc-button:hover {
+    box-shadow: none;
+  }
+
+@media only screen and (min-width: 660px){
+  bbc-terms {
+      margin-left: -15px;
+      margin-right: -15px;
+  }
+}
+bbc-terms {
+  display: block;
+  color: #666;
+  background: #f9fafc;
+  padding-bottom: 25px;
+}
+
+.bbc-progress-bar{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.bbc-address.results .bbc-address-input {
+    border-bottom: none !important;
+}
+
+.things{
+    padding: 1.4em 3.2em;
+    background-color: #f3f1ef;
+	font-size: 16px;
+}
+
+.things a{
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  margin-left: -30px;
+
+	display: inline-block;
+	/*max-width: 150px;*/
+	text-align: left;
+
+}
+
+
+@media only screen and (min-width: 768px) {
+	.things{
+		font-size: 20px;
+		padding: 1.4em;
+	}
+
+	.things a{
+		/*max-width: none;*/
+		text-align: center;
+	}
+
+	.things-text {
+		text-align: center;
+	}
+}
+
+.things a:after {
+	font-family: FontAwesome;
+	content: "\f054";
+	margin-top: 2px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #009FE3;
+	color: #fff;
+	border-radius: 100%;
+	position: absolute;
+	right: -30px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 10px;
+
+	line-height: 21px;
+	text-align: center;
+	font-weight: lighter;
+}
+
+.bbc-address.refined .bbc-address-map {
+	background-color: #3c77c2;
+}
+
+.bbc-address-list-header h3 {
+	color: #33a5e5;
+}
+
+.bbc-address-list-header p {
+	color: #fff;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bbc-address .bbc-address-list {
+  background-image: url('../images/home-header-background.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+@media(max-width: 768px) {
+  .bbc-address .bbc-address-list {
+    background-image: url('../images/home-header-background-mobile@2x.jpg')
+  }
+}
+
+.bbc-address .bbc-address-input h3{
+    font-size:38px;
+    margin-bottom: 38px;
+    font-family: MuseoSans900Italic,sans-serif;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+}
+
+.bbc-address.results .results-heading h3{
+    text-shadow: none;
+}
+
+.results .bbc-address-autocomplete input {
+  text-transform: capitalize;
+}
+.bbc-address-autocomplete input {
+  text-transform: capitalize;
+}
+.bbc-progress-bar.steps-5 {
+  margin-top: 0px;
+}
+.bbc-terms {
+  margin-top: 0px;
+}
+div.tool-top-padding {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100px;
+  background-color:#7D55C7;
+}
+@media(max-width: 768px) {
+  div.tool-top-padding {
+    height:20px;
+  }
+}
+@media(max-width: 768px) {
+  div.tool-top-padding {
+    height:20px;
+  }
+}
+@media(max-width: 700px) {
+  div.tool-top-padding {
+    height:0px;
+  }
+}
+@media(max-width: 560px) {
+  div.tool-top-padding {
+    height:45px;
+  }
+}
+
+/* Tool loading screen */
+div.tool-loading {
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  background-color:#fff;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+div.loader-animation-container {
+  text-align: center;
+}
+div.tool-loading img {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+div.tool-loading p {
+  width: 100%;
+  font-size: 14px;
+  color: #7d55c7;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html ng-app="App" lang="en" class="bb-checker-scope">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" href="https://blog.chorus.co.nz/wp-content/themes/chorus/favicon.ico"/>
+    <title>Check your broadband | Chorus</title>
+    <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }</style>
+    <!-- bs -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+    <link rel="stylesheet" href="https://www.chorus.co.nz/css/chorus2015-4.1.10.158.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC9k-RsqCJ2LHyn3Gm-epGcuP-D61tOB1M"></script>
+    <style>
+        .show-all-steps-title {
+            clear: both;
+            background: #f5f8f9;
+            color: #aaa;
+            padding: 2em 1.5em 0.75em;
+            margin: 0 -5px;
+            border-bottom: 2px solid #eee;
+            font-size: 2em;
+        }
+
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+<link href="./app.fe318b21d46f82bb10d1.css" rel="stylesheet"></head>
+<body ng-controller="AppController as app">
+
+    <div class="section-highlighted fade-in" ng-cloak ng-class="{ 'fade-out': app.hide }">
+        <bbc-no-address ng-if="app.noAddress" no-address="app.noAddress" hide="app.hide" address-right="app.addressRight" location="app.location"></bbc-no-address>
+
+        <bbc-address on-change="app.onLocationSelected" no-address="app.noAddress" ng-if="!app.noAddress" hide="app.hide" address-right="app.addressRight"></bbc-address>
+
+        <bbc-progress-bar
+                ng-if="app.location && app.steps.queue.length > 2"
+                steps="app.steps.queue"
+                on-change="app.onStepSelected"
+                current="app.steps.currentIndex"
+        ></bbc-progress-bar>
+
+        <div class="step" ng-if="app.location">
+
+            <!-- Speed Dials ------------------------------------------------------ -->
+
+            <div ng-if="app.showAllSteps" class="show-all-steps-title">Step: Dials</div>
+            <bbc-step-dials
+                    location="app.location" modalshown="app.modalShown"
+                    ng-if="app.showAllSteps || app.steps.current.id === 'dials'"
+                    steps="app.steps.queue" on-change="app.onStepSelected"
+            ></bbc-step-dials>
+
+
+            <!-- Consent ---------------------------------------------------------- -->
+
+            <div ng-if="app.showAllSteps" class="show-all-steps-title">Step: Consent - MDU</div>
+            <bbc-step-consent-mdu
+                    address="app.location.address.name.short"
+                    lead-time="app.location.technology.fastest.data.install_lead_time_human"
+                    ng-if="app.showAllSteps || app.steps.current.id === 'consent-mdu'"
+            ></bbc-step-consent-mdu>
+
+            <div ng-if="app.showAllSteps" class="show-all-steps-title">Step: Consent - ROW</div>
+            <bbc-step-consent-row
+                    address="app.location.address.name.short"
+                    lead-time="app.location.technology.fastest.data.install_lead_time_human"
+                    ng-if="app.showAllSteps || app.steps.current.id === 'consent-row'"
+            ></bbc-step-consent-row>
+
+
+            <!-- Build ------------------------------------------------------------ -->
+
+            <div ng-if="app.showAllSteps" class="show-all-steps-title">Step: Build - MDU</div>
+            <bbc-step-build-mdu
+                    address="app.location.address.name.short"
+                    lead-time="app.location.technology.fastest.data.install_lead_time_human"
+                    ng-if="app.showAllSteps || app.steps.current.id === 'build-mdu'"
+            ></bbc-step-build-mdu>
+
+            <div ng-if="app.showAllSteps" class="show-all-steps-title">Step: Build - ROW</div>
+            <bbc-step-build-row
+                    address="app.location.address.name.short"
+                    lead-time="app.location.technology.fastest.data.install_lead_time_human"
+                    ng-if="app.showAllSteps || app.steps.current.id === 'build-row'"
+            ></bbc-step-build-row>
+
+
+            <!-- ABC Process ------------------------------------------------------ -->
+
+            <div ng-if="app.showAllSteps" class="show-all-steps-title">Step: Process - SDU</div>
+            <bbc-step-process-sdu
+                    address="app.location.address.name.short"
+                    lead-time="app.location.technology.fastest.data.install_lead_time_human"
+                    ng-if="app.showAllSteps || app.steps.current.id === 'process-sdu'"
+            ></bbc-step-process-sdu>
+
+            <div ng-if="app.showAllSteps" class="show-all-steps-title">Step: Process - MDU</div>
+            <bbc-step-process-mdu
+                    address="app.location.address.name.short"
+                    lead-time="app.location.technology.fastest.data.install_lead_time_human"
+                    ng-if="app.showAllSteps || app.steps.current.id === 'process-mdu'"
+            ></bbc-step-process-mdu>
+
+            <div ng-if="app.showAllSteps" class="show-all-steps-title">Step: Process - ROW</div>
+            <bbc-step-process-row
+                    location="app.location"
+                    address="app.location.address.name.short"
+                    lead-time="app.location.technology.fastest.data.install_lead_time_human"
+                    ng-if="app.showAllSteps || app.steps.current.id === 'process-row'"
+            ></bbc-step-process-row>
+
+
+            <!-- Providers -------------------------------------------------------- -->
+
+            <div ng-if="app.showAllSteps" class="show-all-steps-title">Step: Providers</div>
+            <bbc-step-providers
+                    location="app.location"
+                    region="app.location.providersRegion"
+                    lead-time="app.location.technology.fastest.data.install_lead_time_human"
+                    ng-if="app.showAllSteps || app.steps.current.id === 'providers'"
+            ></bbc-step-providers>
+
+        </div>
+
+        <div class="step-actions" ng-if="app.location" ng-class="{'single-action': !app.steps.prev || !app.steps.next}">
+
+            <!--
+            <button class="chorus-btn chorus-btn-blue prev" ng-click="app.steps.onPrev(); app.scrollTop()"
+                    ng-if="app.steps.prev"><i class="fa fa-chevron-left"></i> <span
+                        ng-bind="'Prev: ' + app.steps.prev.title"></span></button>
+            <button class="chorus-btn chorus-btn-blue next" ng-click="app.steps.onNext(); app.scrollTop()"
+                    ng-if="app.steps.next"><span ng-bind="'Next: ' + app.steps.next.title"></span> <i
+                        class="fa fa-chevron-right"></i></button>
+                        -->
+            <button class="chorus-btn chorus-btn-blue prev" ng-click="app.steps.onPrev(); app.scrollTop()"
+                    ng-if="app.steps.prev"><span
+                        ng-bind="'BACK'"></span></button>
+            <button class="chorus-btn chorus-btn-blue next" ng-click="app.steps.onNext(); app.scrollTop()"
+                    ng-if="app.steps.next"><span ng-bind="'NEXT'"></span></button>
+        </div>
+
+    </div>
+
+    <bbc-terms ng-if="app.location"></bbc-terms>
+
+    <i class="fa fa-bug" ng-click="showDebug = !showDebug"
+       style="color:#fff; opacity:0.05; position:absolute; bottom:0; right:0"></i>
+    <pre ng-cloak ng-show="showDebug">{{ {steps: app.steps, location: app.location} | json }}</pre>
+
+<script type="text/javascript" src="https://chorus-viewer.wivolo.com/viewer-chorus/js/wialus-bootstrap.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script></script>
+<script type="text/javascript" src="./app.fe318b21d46f82bb10d1.js"></script></body>
+</html>
